@@ -20,14 +20,14 @@ questionForm.addEventListener('submit',(event: Event) => {
 
 function saveQues() {
     let data = localStorage.getItem('questionData');
-    let questionData:Question = data ? JSON.parse(data) : [];
+    // let questionData:Question = data ? JSON.parse(data) : [];
 
     if(!isValueValid(question)) {
-        console.log("User is Creating");
         createQuestion(question.value);
+    } else {
+        setInputError(question, 'Question can not be blank');
     }
 }
-
 
 function createQuestion(question: string) {
     let currrentData = sessionData ? JSON.parse(sessionData) : [];
@@ -48,13 +48,13 @@ function saveQuestion(quesObj:Question) {
     if(dataPresent) {
         dataPresent.push(quesObj);
         localStorage.setItem("questionData", JSON.stringify(dataPresent));
-        console.log("User Data Saved Successfully");
+        alert("User Data Saved Successfully");
         
     } else {
         dataPresent=[]
         dataPresent.push(quesObj);
         localStorage.setItem("questionData", JSON.stringify(dataPresent));
-        console.log('Student Added Successfully');
+        alert('Student Added Successfully');
     }
 
     // questionForm.reset();
@@ -62,8 +62,9 @@ function saveQuestion(quesObj:Question) {
         let inputs = document.querySelectorAll(".input-control");
         inputs.forEach(input => {
             input.classList.remove("success");
+            question.value = "";
         })
-    }, 1000)
+    }, 500)
 }
 
 function isValueValid(data:HTMLInputElement):boolean {
