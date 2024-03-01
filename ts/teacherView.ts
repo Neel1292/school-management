@@ -1,4 +1,4 @@
-interface Teacher {
+type Teacher = {
     name: string;
     age:number;
     role: string;

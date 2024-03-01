@@ -1,4 +1,4 @@
-interface Student {
+type Student = {
     name: string;
     age:number;
     role: string;

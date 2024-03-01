@@ -1,7 +1,7 @@
 // Get the form element
 const teacherForm = document.querySelector('.teacher-form') as HTMLFormElement;
 
-interface TeacherObject{
+type TeacherObject = {
     name: string;
     age: number;
     email: string;
@@ -47,7 +47,7 @@ teacherEmail.addEventListener("input", function(e:Event){
 });
 
 teacherEmail.addEventListener("blur", (event:Event) => {
-    // debugger
+    
     let userMail:string = (event.target as HTMLInputElement).value;
     let emailRequired = '^[a-zA-Z0-9._%+-]+@(gmail|outlook|yahoo)\.[a-zA-Z]{2,}$';
     let isValidEmail = userMail.match(emailRequired);
@@ -69,7 +69,9 @@ teacherEmail.addEventListener("blur", (event:Event) => {
 });
 
 teacherPassword.addEventListener("keyup", (e: Event) => {
+
     passwordMatchList.forEach(list => list.style.display = "block");
+
     if(!isEmptyData(teacherPassword)) {
     
         passRequiredList.forEach(item => {
@@ -110,7 +112,7 @@ if(eye) {
 }
 
 if(eye2) {
-   
+
     eye2.addEventListener("click", ()=> {
         teacherConfirmPassword.type = teacherConfirmPassword.type === "password" ? "text" : "password";
         
@@ -121,8 +123,6 @@ if(eye2) {
 // Function to handle form submission
 teacherForm.addEventListener('submit',(event: Event) => {
     event.preventDefault(); 
-
-    // debugger
 
     let data = localStorage.getItem('teacherData');
     let teacherData:TeacherObject[] = data ? JSON.parse(data) : [];
@@ -192,8 +192,6 @@ teacherForm.addEventListener('submit',(event: Event) => {
         console.log("User is Creating");
         createTeacher(teacherName.value, parseInt(teacherAge.value), teacherEmail.value, teacherPassword.value);
     }
-
-
 })
 
 function isExistEmail(emailValue:string, teacher:TeacherObject[]):Function {

@@ -1,7 +1,7 @@
 // Get the form element
 const studentForm = document.querySelector('.student-form') as HTMLFormElement;
 
-interface StudentObject{
+type StudentObject = {
     name: string;
     age: number;
     email: string;

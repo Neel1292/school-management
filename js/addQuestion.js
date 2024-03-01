@@ -10,8 +10,6 @@ questionForm.addEventListener('submit', (event) => {
     saveQues();
 });
 function saveQues() {
-    let data = localStorage.getItem('questionData');
-    // let questionData:Question = data ? JSON.parse(data) : [];
     if (!isValueValid(question)) {
         createQuestion(question.value);
     }

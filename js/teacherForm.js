@@ -34,7 +34,6 @@ teacherEmail.addEventListener("input", function (e) {
     }
 });
 teacherEmail.addEventListener("blur", (event) => {
-    // debugger
     let userMail = event.target.value;
     let emailRequired = '^[a-zA-Z0-9._%+-]+@(gmail|outlook|yahoo)\.[a-zA-Z]{2,}$';
     let isValidEmail = userMail.match(emailRequired);
@@ -101,7 +100,6 @@ if (eye2) {
 // Function to handle form submission
 teacherForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    // debugger
     let data = localStorage.getItem('teacherData');
     let teacherData = data ? JSON.parse(data) : [];
     let emailExists = false;

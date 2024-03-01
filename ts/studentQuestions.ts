@@ -1,4 +1,4 @@
-interface Question{
+type Question = {
   question: string;
 }
 

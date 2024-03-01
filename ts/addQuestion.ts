@@ -1,7 +1,7 @@
 // Get the form element
 const questionForm = document.querySelector('.question-form') as HTMLFormElement;
 
-interface Question{
+type Questions = {
     email:string;
     question: string;
     author: string;
@@ -19,8 +19,6 @@ questionForm.addEventListener('submit',(event: Event) => {
 })
 
 function saveQues() {
-    let data = localStorage.getItem('questionData');
-    // let questionData:Question = data ? JSON.parse(data) : [];
 
     if(!isValueValid(question)) {
         createQuestion(question.value);
@@ -31,7 +29,7 @@ function saveQues() {
 
 function createQuestion(question: string) {
     let currrentData = sessionData ? JSON.parse(sessionData) : [];
-    const quesObj:Question = {
+    const quesObj:Questions = {
         email: currrentData.email,
         question: question,
         author: currrentData.name
@@ -40,7 +38,7 @@ function createQuestion(question: string) {
     saveQuestion(quesObj);    
 }
 
-function saveQuestion(quesObj:Question) {
+function saveQuestion(quesObj:Questions) {
 
     let localData = localStorage.getItem("questionData");
     let dataPresent: any[] = localData ? JSON.parse(localData) : [];
@@ -97,7 +95,4 @@ const setInputSuccess = (element:HTMLInputElement) => {
             inputControl.classList.remove("error");         
         }
   }
-
-  
-
 };

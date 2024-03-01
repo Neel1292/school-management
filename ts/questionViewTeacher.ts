@@ -1,4 +1,4 @@
-interface Question{
+type TeacherQuestion = {
     email:string;
     question: string;
     author: string;
@@ -26,7 +26,7 @@ searchQuestions.addEventListener("keypress", (event:Event) => {
   displayData.innerHTML = ""; // Clear previous results
 
   if (searchValue) {
-    questionData = questionData.filter((questions:Question) => {
+    questionData = questionData.filter((questions:TeacherQuestion) => {
       
       return (
         questions.author.toLowerCase().includes(searchValue.toLowerCase()) ||
@@ -36,7 +36,7 @@ searchQuestions.addEventListener("keypress", (event:Event) => {
   }
 
   if (questionData.length > 0) {
-    questionData.forEach((question:Question, index:number) => {
+    questionData.forEach((question:TeacherQuestion, index:number) => {
 
       displayData.innerHTML += `
         <tr>
@@ -59,7 +59,7 @@ searchQuestions.addEventListener("keypress", (event:Event) => {
 function getQuestionView() {
     // displayData.innerHTML = ''; 
   
-    let questionData:Question[] = questionDataJSON ? JSON.parse(questionDataJSON) : [];
+    let questionData:TeacherQuestion[] = questionDataJSON ? JSON.parse(questionDataJSON) : [];
     
     if(questionData.length > 0) {
       // displayTotalHours.innerText = ''
@@ -84,7 +84,7 @@ function getQuestionView() {
 }
 
 function deleteQuestion(index:number) {
-    let teacher:Teacher[] = questionDataJSON ? JSON.parse(questionDataJSON) : [];
+    let teacher:TeacherQuestion[] = questionDataJSON ? JSON.parse(questionDataJSON) : [];
     // Display confirmation block
     if (confirm("Are you sure you want to delete this user's data?")) {
       // If user confirms, perform the deletion
