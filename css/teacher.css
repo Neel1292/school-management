@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.page-width {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;    
+}
+
+.site-header {
+    padding: 25px 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+marquee {
+    color: #2a6154;
+}
+
+.custom-custom-btn {
+    background-color: transparent;
+    border-color: white;
+}
+
+.header {
+    background-color: rgb(190 239 255);
+    color: white;
+    padding: 10px 0;
+}
+
+
+/* Navigation Styles */
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.nav-list ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 0px;
+}
+
+.nav-list ul li {
+    font-size: 18px;
+    padding: 0;
+}
+
+.nav-list ul li a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.header .nav-list a {
+	color: #2990b2;
+	text-decoration: none;
+}
+
+nav a.active {
+	font-weight: 500;
+    color: #08727f !important;
+}
+
+.content {
+	margin: 20px;
+}
+
+.content > div {
+	display: none;
+}
+
+.content div.active {
+	display: block;
+}
+
+
+/* Modal Input field */
+.modal-title {
+    text-align: center;
+    padding-top: 20px;
+    color: #136363;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+input {
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    color: rgb(5, 68, 75);
+    border-bottom: 1px solid #cdcdcd;
+}
+
+::placeholder {
+    color: #2a6154;
+    font-size: 14px;
+}
+
+.error {
+    font-size: 12px;
+    color: red;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+/* Teacher Passaord */
+
+.teacher-form .input-control:nth-child(4) {
+    position: relative;
+}
+
+.teacher-form .input-control:nth-child(4) #eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 28%;
+}
+
+.teacher-form .input-control:nth-child(5) {
+    position: relative;
+}
+
+.teacher-form .input-control:nth-child(5) #eye-icon2 {
+    position: absolute;
+    right: 10px;
+    top: 28%;
+}
+
+/* Password Match List Styles */
+
+.password-match-list, .password-match-list-2 {
+    display: none;
+    position: absolute;
+    top: 35px;
+    width: 250px;
+    border-radius: 10px;
+    padding: 0 2px;
+    background-color: #ffffffa3;
+    z-index: 999;
+}
+
+.password-match-list li, .password-match-list-2 li {
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: red;
+}
+
+.password-match-list li i, .password-match-list-2 li i {
+    margin-right: 5px;
+}
+
+.password-match-list .fa-xmark, .password-match-list-2 .fa-xmark {
+    color: red;
+}
+
+.password-match-list li.valid,
+.password-match-list-2 li.valid,
+.password-match-list li.valid span,
+.password-match-list-2 li.valid span,
+.password-match-list .fa-check,
+.password-match-list-2 .fa-check {
+    color: #09c372;
+}
+
+/* Student Passowrd */
+
+.student-form .input-control:nth-child(4) {
+    position: relative;
+}
+
+.student-form .input-control:nth-child(4) #stud-eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 28%;
+}
+
+.student-form .input-control:nth-child(5) {
+    position: relative;
+}
+
+.student-form .input-control:nth-child(5) #stud-eye-icon2 {
+    position: absolute;
+    right: 10px;
+    top: 28%;
+}
+
+/* --------------------------------------------------------------------------- */
+
+
+/* Nav CSS */
+
+#viewTeacher, #viewStudent{
+    display: none;
+}
+
+.user-nav .nav-menu a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Button */
+
+.custom-btn {
+    padding: 8px 21px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: rgb(9, 159, 224);
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.custom-btn:hover {
+    border: 1px solid rgb(9, 159, 224);
+    background-color: transparent;
+    color: rgb(9, 159, 224);
+}

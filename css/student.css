@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+input {
+    padding: 3px 15px;
+    outline: none;
+    border: 1px solid #136363;
+    background-color: transparent;
+}
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.page-width {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;    
+}
+
+.site-header {
+    padding: 25px 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+marquee {
+    color: #2a6154;
+}
+
+.header {
+    background-color: rgb(190 239 255);
+    color: white;
+    padding: 10px 0;
+}
+
+
+/* Navigation Styles */
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.nav-list ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 0px;
+}
+
+.nav-list ul li {
+    font-size: 18px;
+    padding: 0;
+}
+
+.nav-list ul li a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.header .nav-list a {
+	color: #2990b2;
+	text-decoration: none;
+}
+
+nav a.active {
+	font-weight: 500;
+    color: #08727f !important;
+}
+
+.content {
+	margin: 20px;
+}
+
+.content > div {
+	display: none;
+}
+
+.content div.active {
+	display: block;
+}
+
+#view-questions {
+    text-align: center;
+}
+
+/* Question Table */
+
+.questions-data-view{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Set the table border and head color */
+.questions_data_table {
+    border: 2px solid #136363;
+    background-color: rgb(190 239 255);
+    width: 100%;
+}
+
+.questions_data_table th {
+    background-color: #136363;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.questions_data_table tr td {
+    padding: 10px ;
+    border-right: 2px solid #2a6154;
+}
+
+::placeholder {
+    color: #2a6154;
+    font-size: 12px;
+}
+
+.custom-btn {
+    padding: 8px 21px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: rgb(9, 159, 224);
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.custom-btn:hover {
+    border: 1px solid rgb(9, 159, 224);
+    background-color: transparent;
+    color: rgb(9, 159, 224);
+}

@@ -1,0 +1,23 @@
+    
+/* Center the table in the window */
+.question-data-view{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* text-align: center; */
+    gap: 20px;
+}
+
+/* Set the table border and head color */
+.question_data_table {
+    border: 2px solid #136363;
+    border-collapse: collapse;
+    background-color: rgb(190 239 255);
+    /* margin: auto; */
+    width: 100%;
+}
+
+.question_data_table th {
+    background-color: #136363;
+    color: #fff;
+}

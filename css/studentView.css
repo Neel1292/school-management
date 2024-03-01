@@ -1,0 +1,59 @@
+     
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+
+h2 {
+    text-align: center;
+    margin: 0 auto;
+    color: #067381;
+}
+
+table, th, td {
+    border: 1px solid #136363;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+/* Center the table in the window */
+.student-data-view{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Set the table border and head color */
+.student_data_table {
+    border: 2px solid #136363;
+    border-collapse: collapse;
+    background-color: rgb(190 239 255);
+    /* margin: auto; */
+    width: 100%;
+}
+
+.student_data_table th {
+    background-color: #136363;
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+}
+
+.add_user_btn {
+    text-align: center;
+    margin: 15px auto 0 auto;
+}
